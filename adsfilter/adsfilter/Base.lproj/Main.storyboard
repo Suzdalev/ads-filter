@@ -667,7 +667,7 @@
                     <window key="window" title="domain/ads.txt filter" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="805" height="369"/>
+                        <rect key="contentRect" x="196" y="240" width="871" height="369"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -676,14 +676,14 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="261"/>
+            <point key="canvasLocation" x="313.5" y="260.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="adsfilter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" propertyAccessControl="all">
-                        <rect key="frame" x="0.0" y="0.0" width="781" height="321"/>
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="937" height="321"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3X-j2-0OE">
@@ -703,19 +703,19 @@
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="uF0-Up-hc6">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.97756696428571432" green="0.96821986607142863" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textFieldCell>
                                 <connections>
                                     <action selector="btnMagic:" target="XfG-lQ-9wD" id="NqF-kH-nWZ"/>
                                 </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wS9-ou-5Au">
-                                <rect key="frame" x="328" y="20" width="211" height="259"/>
+                                <rect key="frame" x="328" y="20" width="189" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Wfe-8g-Ngr">
+                                <textFieldCell key="cell" selectable="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Wfe-8g-Ngr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.95022321428571432" green="1" blue="0.95555245535714284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVA-pI-nH3">
@@ -755,16 +755,34 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZF-fJ-DUS">
-                                <rect key="frame" x="557" y="20" width="204" height="259"/>
+                                <rect key="frame" x="525" y="20" width="182" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="h8c-eA-bD5">
+                                <textFieldCell key="cell" selectable="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="h8c-eA-bD5">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="1" green="0.95477120535714288" blue="0.97720424107142856" alpha="1" colorSpace="calibratedRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9T-el-oN0">
+                                <rect key="frame" x="715" y="20" width="182" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gwI-He-IUB">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" white="0.96157924107142856" alpha="1" colorSpace="calibratedWhite"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75Y-ag-DWg">
+                                <rect key="frame" x="713" y="284" width="132" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Unsucceed response" id="lIp-BE-KXX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsW-kv-vfr">
-                                <rect key="frame" x="557" y="287" width="102" height="17"/>
+                                <rect key="frame" x="523" y="287" width="102" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="/ads.txt availible" id="DUP-YP-eHJ">
                                     <font key="font" metaFont="system"/>
@@ -779,13 +797,14 @@
                         <outlet property="srtStatus" destination="nW0-9i-ctA" id="6fD-O8-5dH"/>
                         <outlet property="strStatus" destination="nW0-9i-ctA" id="3Sa-f6-VHO"/>
                         <outlet property="textAdsLinks" destination="YZF-fJ-DUS" id="ZxD-4A-WO7"/>
+                        <outlet property="textBadReauest" destination="g9T-el-oN0" id="HA1-cv-Xqv"/>
                         <outlet property="textFilteredLinks" destination="wS9-ou-5Au" id="CBO-Jf-0Pv"/>
                         <outlet property="textSourceLinks" destination="uF0-Up-hc6" id="3MF-ES-e1w"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="636"/>
+            <point key="canvasLocation" x="295.5" y="635.5"/>
         </scene>
     </scenes>
 </document>

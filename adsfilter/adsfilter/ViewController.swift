@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var textSourceLinks: NSTextField!
    
     @IBOutlet weak var textFilteredLinks: NSTextField!
+    @IBOutlet weak var textBadReauest: NSTextField!
     
     @IBOutlet weak var proceedCount: NSTextField!
     @IBOutlet weak var textAdsLinks: NSTextField!
@@ -25,9 +26,11 @@ class ViewController: NSViewController {
         self.srtStatus.stringValue = "in process..."
         textFilteredLinks.stringValue = ""
         textAdsLinks.stringValue = ""
+        textBadReauest.stringValue = ""
         let urlArray = textSourceLinks.stringValue.components(separatedBy: "\n")
         var urlFilteredArray = [String]()
         var urlAdsArray = [String]()
+        var urlBadRequest = [String]()
         let totalURLS = urlArray.count
         var currentURL = 0
         for url  in urlArray {
@@ -49,9 +52,9 @@ class ViewController: NSViewController {
                             }
                     }
                 }else {
-                    if urlFilteredArray.contains(url) {} else {
-                        urlFilteredArray.append(url)
-                        self.textFilteredLinks.stringValue += "\(url)\n"
+                    if urlBadRequest.contains(url) {} else {
+                        urlBadRequest.append(url)
+                        self.textBadReauest.stringValue += "\(url)\n"
                     }
                 }
             
@@ -70,6 +73,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override var representedObject: Any? {
