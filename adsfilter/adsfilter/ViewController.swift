@@ -21,13 +21,13 @@ class ViewController: NSViewController {
     @IBOutlet weak var srtStatus: NSTextField!
     @IBAction func btnMagic(_ sender: Any) {
         
-        //btn code
+        
         self.srtStatus.stringValue = "in process..."
-        //print(textSourceLinks)
-        let temp = textSourceLinks.stringValue
-        
-        let urlArray = temp.components(separatedBy: "\n")
-        
+        textFilteredLinks.stringValue = ""
+        textAdsLinks.stringValue = ""
+        let urlArray = textSourceLinks.stringValue.components(separatedBy: "\n")
+        var urlFilteredArray = [String]()
+        var urlAdsArray = [String]()
         let totalURLS = urlArray.count
         var currentURL = 0
         for url  in urlArray {
@@ -38,12 +38,21 @@ class ViewController: NSViewController {
             
                 if response.result.isSuccess == true {
                     if (response.result.value?.contains(", DIRECT"))! || (response.result.value?.contains(", RESELLER"))!  {
-                        self.textAdsLinks.stringValue += "\(url)\n"
+                        if urlAdsArray.contains(url) {} else {
+                            urlAdsArray.append(url)
+                            self.textAdsLinks.stringValue += "\(url)\n"
+                            }
                     } else {
-                        self.textFilteredLinks.stringValue += "\(url)\n"
+                        if urlFilteredArray.contains(url) {} else {
+                            urlFilteredArray.append(url)
+                            self.textFilteredLinks.stringValue += "\(url)\n"
+                            }
                     }
                 }else {
-                    self.textFilteredLinks.stringValue += "\(url)\n"
+                    if urlFilteredArray.contains(url) {} else {
+                        urlFilteredArray.append(url)
+                        self.textFilteredLinks.stringValue += "\(url)\n"
+                    }
                 }
             
             
@@ -54,14 +63,7 @@ class ViewController: NSViewController {
                     self.srtStatus.stringValue = "Done!"
                 }
             }
-            
-        
-            
         }
-        
-        
-
-        
         
     }
     override func viewDidLoad() {
