@@ -12,60 +12,55 @@ import Alamofire
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var textSourceLinks: NSTextFieldCell!
+    @IBOutlet weak var textSourceLinks: NSTextField!
    
     @IBOutlet weak var textFilteredLinks: NSTextField!
     
     @IBOutlet weak var proceedCount: NSTextField!
+    @IBOutlet weak var textAdsLinks: NSTextField!
     @IBOutlet weak var srtStatus: NSTextField!
     @IBAction func btnMagic(_ sender: Any) {
         
         //btn code
         self.srtStatus.stringValue = "in process..."
         //print(textSourceLinks)
-        var temp = textSourceLinks.stringValue
-        
-        print(temp)
-      
-        
-        
+        let temp = textSourceLinks.stringValue
         
         let urlArray = temp.components(separatedBy: "\n")
         
-        print(urlArray)
-        
         let totalURLS = urlArray.count
         var currentURL = 0
-        
-        
         for url  in urlArray {
-            Alamofire.request("https://" + url + "/ads.txt").response { response in
-                
-                if response.response?.statusCode == 404
-                {
-                    self.textFilteredLinks.stringValue += "\(url) \n"
+
+            Alamofire.request("https://" + url + "/ads.txt").responseString { response in
+                //print("\n Success: \(response.result.isSuccess)")
+                //print("\n Response String: \(response.result.value)")
+            
+                if response.result.isSuccess == true {
+                    if (response.result.value?.contains(", DIRECT"))! || (response.result.value?.contains(", RESELLER"))!  {
+                        self.textAdsLinks.stringValue += "\(url)\n"
+                    } else {
+                        self.textFilteredLinks.stringValue += "\(url)\n"
+                    }
+                }else {
+                    self.textFilteredLinks.stringValue += "\(url)\n"
                 }
-                
+            
+            
                 currentURL+=1
-                self.proceedCount.stringValue = "\(currentURL)/\(totalURLS)"
                 
+                self.proceedCount.stringValue = "\(currentURL)/\(totalURLS)"
+                if currentURL == urlArray.count {
+                    self.srtStatus.stringValue = "Done!"
+                }
             }
             
-        self.srtStatus.stringValue = "Done!"
+        
             
         }
         
         
- //       let strURL = textSourceLinks.stringValue
- //       Alamofire.request("https://" + strURL + "/ads.txt").response { response in
- //           print("Request: \(response.request)")
- //           print("Response: \(response.response)")
- //           print("Error: \(response.error)")
-            
-  //              self.textFilteredLinks.stringValue = "\(response.response?.statusCode) \n"
-  //              self.textFilteredLinks.updateLayer()
-            
-  //      }
+
         
         
     }
