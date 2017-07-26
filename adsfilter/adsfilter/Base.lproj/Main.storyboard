@@ -727,10 +727,21 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW0-9i-ctA">
+                                <rect key="frame" x="228" y="204" width="94" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Status" id="rKf-Ql-blH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="proceedCount" destination="JVA-pI-nH3" id="HJz-me-TJK"/>
+                        <outlet property="srtStatus" destination="nW0-9i-ctA" id="6fD-O8-5dH"/>
+                        <outlet property="strStatus" destination="nW0-9i-ctA" id="3Sa-f6-VHO"/>
                         <outlet property="textFilteredLinks" destination="wS9-ou-5Au" id="CBO-Jf-0Pv"/>
                         <outlet property="textSourceLinks" destination="uF0-Up-hc6" id="3MF-ES-e1w"/>
                     </connections>

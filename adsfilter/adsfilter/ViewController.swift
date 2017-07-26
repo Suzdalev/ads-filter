@@ -9,6 +9,7 @@
 import Cocoa
 import Alamofire
 
+
 class ViewController: NSViewController {
 
     @IBOutlet weak var textSourceLinks: NSTextFieldCell!
@@ -16,11 +17,22 @@ class ViewController: NSViewController {
     @IBOutlet weak var textFilteredLinks: NSTextField!
     
     @IBOutlet weak var proceedCount: NSTextField!
+    @IBOutlet weak var srtStatus: NSTextField!
     @IBAction func btnMagic(_ sender: Any) {
         
         //btn code
+        self.srtStatus.stringValue = "in process..."
+        //print(textSourceLinks)
+        var temp = textSourceLinks.stringValue
         
-        var urlArray = textSourceLinks.stringValue.components(separatedBy: " ")
+        print(temp)
+      
+        
+        
+        
+        let urlArray = temp.components(separatedBy: "\n")
+        
+        print(urlArray)
         
         let totalURLS = urlArray.count
         var currentURL = 0
@@ -38,6 +50,8 @@ class ViewController: NSViewController {
                 self.proceedCount.stringValue = "\(currentURL)/\(totalURLS)"
                 
             }
+            
+        self.srtStatus.stringValue = "Done!"
             
         }
         
