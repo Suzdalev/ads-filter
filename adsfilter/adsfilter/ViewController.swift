@@ -20,7 +20,7 @@ class ViewController: NSViewController {
         
         //btn code
         
-        var urlArray = textSourceLinks.stringValue.components(separatedBy: "")
+        var urlArray = textSourceLinks.stringValue.components(separatedBy: " ")
         
         let totalURLS = urlArray.count
         var currentURL = 0

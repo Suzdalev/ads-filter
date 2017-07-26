@@ -22,6 +22,10 @@
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSAppTransportSecurity</key>
+	<array>
+		<string> hidden </string>
+	</array>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Igor Suzdalev. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
